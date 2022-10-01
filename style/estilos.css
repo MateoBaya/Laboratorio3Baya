@@ -1,0 +1,201 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+table{
+    border-collapse:  collapse;
+    width:95%;
+  }
+th,td{
+    border:1px solid violet;
+    padding : 10px;
+}
+.numeroPar{
+    background-color:blueviolet;
+    color:cornsilk;
+}
+.numeroImpar{
+    background-color:brown
+}
+th{
+    font-size: 1rem;
+    background-color: aqua;
+}
+tr.numeroImpar:hover,
+tr.numeroPar:hover{
+    background-color: blue;
+    color:aliceblue;
+}
+figure{
+    background-color: rgba(192, 190, 209,0.75);
+    margin: 20px;
+    display: flex;
+    flex-direction:column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-style:solid;
+}
+.card>p,.card>label{
+    border-collapse: collapse;
+    border: 10px;
+    padding:2px;
+}
+.cards{
+    display: flex;
+    flex-direction:row;
+}
+.container{
+/*
+    padding:70px 0px;
+*/
+    margin:0 auto;
+    width: 100%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header>img{
+    padding: 10px 0px;
+    width: 100%;
+}
+.form-container{
+    width: 40%;
+    align-self: center;
+    padding: 1%;
+}
+.form-container>fieldset fieldset{
+    border-style: hidden;
+}
+
+#fieldTransaccion{
+    width:max-content;
+    align-self: center;
+    
+}
+.table-options{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 0, 64);
+    height: 20vh;
+    text-align: center;
+}   
+.options{
+    display: flex;
+    justify-content:flex-start;
+}
+input, select
+{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color:lightblue;
+    border-style: hidden;
+}
+.options>div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.table-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom:2%;
+}
+#formAlta,div{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#form-buttons
+{
+    display: unset;
+}
+
+.homeDiv{
+    display: flex;
+    /*
+    padding-top: 70px;
+    */
+}
+.homeDiv>p{
+    color:white;
+    font-size: 5vh;
+    position:fixed;
+    bottom: 0px;
+    padding: 2rem;
+    max-width: 40vw;
+}
+
+#form-buttons{
+    min-height: 20px;
+}
+#submit,#btnEliminar,#btnCancelar{
+    color:white;
+    border-radius: 5px;
+}
+#submit{
+    background-color:olive;
+}
+#btnEliminar{
+    background-color: red;
+}
+#btnCancelar{
+    background-color:darkslateblue;
+}
+#logo{
+    width: 70px;
+}
+nav{
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+}
+header>nav, footer>nav{
+    position:fixed;
+    width:100%;    
+    justify-content: space-around;
+}
+header>nav{
+    top:0;
+}
+footer>nav{
+    bottom:0;
+}
+nav p{
+    align-self: center;
+    padding:10px;
+    color:white;
+}
+nav>ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    border: 0px;
+    padding: 10px;
+    height: 100%;
+
+}
+nav>ul>li{
+    padding: 10px;
+    height: 100%;
+    color:white;
+}
+nav>ul>li:hover{
+    background-color: antiquewhite;
+    color: black;
+}
+body{
+    background-attachment: fixed;
+    background-size: cover;
+}
+html{
+    background: center fixed;
+}
