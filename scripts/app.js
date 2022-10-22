@@ -96,11 +96,11 @@ selectTipo.addEventListener("change",(e)=>{
     }
 });
 
+actualizarTabla(vehiculos);
 const selectFiltro = document.getElementById("filter");
 selectFiltro.addEventListener("change",(e)=>{
     actualizarTabla(filtrado());
 });
-actualizarTabla(vehiculos);
 
 // SUBMIT CAMBIADO
 formHandler.Singleton.addEventListener("submit",(e)=>{
@@ -461,7 +461,7 @@ function filtrarVehiculo(list,filtrado)
     {
         if(filtrado=="terrestre")
         {
-            const listaFiltrada = lis.filter(function(element){
+            const listaFiltrada = list.filter(function(element){
                 return element instanceof Terrestre;
             });
             return listaFiltrada;
@@ -471,7 +471,7 @@ function filtrarVehiculo(list,filtrado)
             const listaFiltrada = list.filter(function(element){
                 return element instanceof Aereo;
             });
-            return listFiltrada;
+            return listaFiltrada;
         }
     }
     else
@@ -524,7 +524,7 @@ function filtrado()
     });
     
     tablaFiltrada=filtrarTabla(filtrarVehiculo(vehiculos,selectFiltro.value),arrayfilters);
-    //console.log(tablaFiltrada);
+    console.log(tablaFiltrada);
     if(tablaFiltrada.length>0)
     {
         promedio.value=promediarVelocidad(tablaFiltrada);
