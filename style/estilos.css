@@ -137,6 +137,27 @@ input, select
 #form-buttons{
     min-height: 20px;
 }
+.tableAndButton
+{
+    width: 100%;
+    display: flex;
+    padding-bottom:2%;
+    flex-direction: column;
+}
+#btnAgregar{
+    color:white;
+    border-radius: 5px;
+    background-color: olive;
+    border-style: hidden;
+    max-width: 5rem;
+}
+#btnPromediar{
+    color:black;
+    border-radius: 5px;
+    background-color: lightblue;
+    border-style: hidden;
+    max-width: 5rem;
+}
 #submit,#btnEliminar,#btnCancelar{
     color:white;
     border-radius: 5px;

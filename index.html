@@ -14,16 +14,48 @@
             <main class="main">
                 <section class="form-container">
                     <fieldset>
-                        <legend>Gente</legend>
+                        <legend>Vehiculos</legend>
                         <div id="form-holding">
                         </div>
                     </fieldset>
                 </section>
                 <div class="table-options">
                     <h2>Form Datos</h2>
-                    <section class="options"></section>
+                    <section class="options">
+                        <div>
+                            <label for="filter">Filtrar por:</label>
+                            <select name="filter" id="filter">
+                                <option value="todos">Todos</option>
+                                <option value="terrestre">Terrestre</option>
+                                <option value="aereo">Aereo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Promedio de velcidad maxima</label>
+                            <input type="number" name="promedio" id="promedio" placeholder="N/A" readonly>
+                            <button id="btnPromediar">Promediar</button>
+                        </div>
+                        <div>
+                            <label>Campos mostrados</label>
+                            <fieldset>
+                                <legend>Seleccione campos a mostrar</legend>
+                                <input type="checkbox" name="modelo" id="modeloC" checked value="modelo">Modelo
+                                <input type="checkbox" name="añoFabricacion" id="añoFabricacionC" checked value="añoFabricacion">AñoFabricacion
+                                <input type="checkbox" name="velocidadMaxima" id="velocidadMaximaC" checked value="velocidadMaxima">VelocidadMaxima
+                                <input type="checkbox" name="cantidadPuertas" id="cantidadPuertasC" checked value="cantidadPuertas">CantidadPuertas
+                                <input type="checkbox" name="cantidadRuedas" id="cantidadRuedasC" checked value="cantidadRuedas">CantidadRuedas
+                                <input type="checkbox" name="alturaMaxima" id="alturaMaximaC" checked value="alturaMaxima">AlturaMaxima
+                                <input type="checkbox" name="autonomia" id="autonomiaC" checked value="autonomia">Autonomia
+                                
+                            </fieldset>
+                        </div>
+                    </section>
                 </div>
-                <section class="table-container"></section>
+                <section class="tableAndButton">
+                    <section class="table-container">
+                    </section>
+                    <button id="btnAgregar">Agregar</button>
+                </section>
             </main>
         </div>
     </div>

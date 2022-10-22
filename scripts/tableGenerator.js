@@ -52,7 +52,6 @@ function BodyGenerator(arrayBody,keys)
             tr.classList.add(index%2?"numeroImpar":"numeroPar");
             for(let value in element)
             {
-
                 if(keyarray[i]==value)
                 {
                     if(value!="id")
@@ -61,46 +60,46 @@ function BodyGenerator(arrayBody,keys)
                         const tdNode = document.createElement("td");
                         tdNode.appendChild(text);
                         tr.appendChild(tdNode);
+                        i++;
+
                     }
                     else if(value === "id")
                     {
                         tr.setAttribute('data-id',element[value]);
-                    }
-
-                    while(i<keyarray.length-1&&i>=6)
-                    {
-                        const text = document.createTextNode("-");
-                        const tdNode = document.createElement("td");
-                        tdNode.appendChild(text);
-                        tr.appendChild(tdNode);   
                         i++;
+                        
                     }
-                    i++;
-                    
-                }
-                else
-                {
-                  
-                    while(keyarray[i]!=value&&i<=keyarray.length)
+                    if(i==Object.keys(element).length)
                     {
-                        if(value!="id")
+                        let auxI = i;
+                        auxI++;
+                        while(auxI<=keyarray.length&&auxI>Object.keys(element).length)
                         {
                             const text = document.createTextNode("-");
                             const tdNode = document.createElement("td");
                             tdNode.appendChild(text);
                             tr.appendChild(tdNode);
+                            auxI++;
                         }
-                        i++;
                     }
-                    i++;
-                    const text = document.createTextNode(element[value]);
-                     const tdNode = document.createElement("td");
-                        tdNode.appendChild(text);
-                        tr.appendChild(tdNode);
-                        
 
                 }
-                
+                else
+                {
+                    while(keyarray[i]!=value)
+                    {
+                        const text = document.createTextNode("-");
+                        const tdNode = document.createElement("td");
+                        tdNode.appendChild(text);
+                        tr.appendChild(tdNode);
+                        i++;
+                    }
+                    const text = document.createTextNode(element[value]);
+                    const tdNode = document.createElement("td");
+                    tdNode.appendChild(text);
+                    tr.appendChild(tdNode);
+                    i++;
+                }
             }
             
             tbody.appendChild(tr);
